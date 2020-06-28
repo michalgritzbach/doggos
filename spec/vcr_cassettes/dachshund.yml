@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dog.ceo/api/breed/dachshund/images
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 26 Jun 2020 13:36:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dad2eef6899e4d48c853ff5279bd3da341593178573; expires=Sun, 26-Jul-20
+        13:36:13 GMT; path=/; domain=.dog.ceo; HttpOnly; SameSite=Lax; Secure
+      X-Powered-By:
+      - PHP/7.3.17
+      Access-Control-Allow-Origin:
+      - "*"
+      Via:
+      - 1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)
+      Cache-Control:
+      - max-age=1800
+      X-Cache-Age:
+      - '15454'
+      X-Cache-Hits:
+      - '34'
+      X-Cache:
+      - HIT
+      Age:
+      - '0'
+      Vary:
+      - ''
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '039270e1a000007bd0f6040200000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5a9750e298be7bd0-PRG
+    body:
+      encoding: ASCII-8BIT
+      string: '{"message":["https:\/\/images.dog.ceo\/breeds\/dachshund\/Dachshund_rabbit.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/Daschund-2.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/Daschund_Wirehair.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/Dash_Dachshund_With_Hat.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/Miniature_Daschund.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/Standard_Wire-hair_Dachshund.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/Stretched_Dachshund.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-1018409_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-123503_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-1920_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-2033796_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-3.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-5.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-6.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-7.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund-in-jacket.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dachshund_4.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/daschund-1.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dog-1018408_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dog-1083690_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dog-2643027_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dog-495122_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dog-495133_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/dog-55140_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/foxhound-53951_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/harry-646905_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/kaninchen-dachshund-953699_640.jpg","https:\/\/images.dog.ceo\/breeds\/dachshund\/puppy-1006024_640.jpg"],"status":"success"}'
+  recorded_at: Fri, 26 Jun 2020 13:36:13 GMT
+recorded_with: VCR 6.0.0

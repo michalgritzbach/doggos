@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dog.ceo/api/breed/cat/images
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 26 Jun 2020 13:43:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfba220c5149ab8a8a66fbedd59cdcae91593179000; expires=Sun, 26-Jul-20
+        13:43:20 GMT; path=/; domain=.dog.ceo; HttpOnly; SameSite=Lax; Secure
+      X-Powered-By:
+      - PHP/7.3.17
+      Access-Control-Allow-Origin:
+      - "*"
+      Via:
+      - 1.1 varnish (Varnish/6.3), 1.1 varnish (Varnish/6.3)
+      Cache-Control:
+      - max-age=1800
+      X-Cache-Age:
+      - '0'
+      X-Cache-Hits:
+      - '0'
+      X-Cache:
+      - MISS
+      Age:
+      - '0'
+      Vary:
+      - ''
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '03927765b20000d45b1b007200000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5a975b4f8db7d45b-HAM
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"error","message":"Breed not found (master breed does not
+        exist)","code":404}'
+  recorded_at: Fri, 26 Jun 2020 13:43:20 GMT
+recorded_with: VCR 6.0.0
