@@ -17,6 +17,8 @@ class Doggos
   include Celluloid
 
   def download(breed)
+    puts "Downloading #{breed}…"
+
     uri = URI("https://dog.ceo/api/breed/#{breed}/images")
     res = Net::HTTP.get_response(uri)
     parsed = JSON.parse(res.body)
@@ -25,6 +27,8 @@ class Doggos
 
     build_csv(breed, parsed['message'])
     { "#{breed}.csv" => DateTime.now.to_s }
+  rescue RuntimeError => e
+    puts e.message
   end
 
   private
@@ -54,12 +58,14 @@ class DoggosRunner
     raise ArgumentError, 'Breed names not provided!' unless breeds.count.positive?
 
     pool = Doggos.pool(size: ENV.fetch('POOL_SIZE', 5).to_i)
-    futures = breeds.uniq.map { |breed| pool.future(:download, breed.downcase) }
-    downloaded = futures.map(&:value).inject(:merge)
+    futures = breeds.map(&:downcase).uniq.map { |breed| pool.future(:download, breed) }
+    downloaded = futures.map(&:value).compact.inject(:merge)
     generate_json(downloaded)
   end
 
   def self.generate_json(downloaded)
+    puts 'Generating updated_at.json…'
+
     File.open('./updated_at.json', 'wb') do |f|
       f << JSON.generate(downloaded: downloaded)
     end
